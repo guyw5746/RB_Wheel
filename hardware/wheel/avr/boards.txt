@@ -1,0 +1,69 @@
+# Arduino Micro / Pro Micro (ATmega32U4, 5V 16MHz) with custom USB name and PID.
+# Core and variant come from the installed "Arduino AVR Boards" package.
+# Each board has its own PID so Windows keeps their names separate.
+
+wheel_a.name=Wheel Micro A
+wheel_a.vid.0=0x2341
+wheel_a.pid.0=0x9A01
+wheel_a.upload.tool=arduino:avrdude
+wheel_a.upload.protocol=avr109
+wheel_a.upload.maximum_size=28672
+wheel_a.upload.maximum_data_size=2560
+wheel_a.upload.speed=57600
+wheel_a.upload.disable_flushing=true
+wheel_a.upload.use_1200bps_touch=true
+wheel_a.upload.wait_for_upload_port=true
+wheel_a.build.mcu=atmega32u4
+wheel_a.build.f_cpu=16000000L
+wheel_a.build.vid=0x2341
+wheel_a.build.pid=0x9A01
+wheel_a.build.usb_product="Wheel Buttons A"
+wheel_a.build.usb_manufacturer="DIY"
+wheel_a.build.board=AVR_MICRO
+wheel_a.build.core=arduino:arduino
+wheel_a.build.variant=arduino:micro
+wheel_a.build.extra_flags={build.usb_flags}
+
+wheel_b.name=Wheel Micro B
+wheel_b.vid.0=0x2341
+wheel_b.pid.0=0x9A02
+wheel_b.upload.tool=arduino:avrdude
+wheel_b.upload.protocol=avr109
+wheel_b.upload.maximum_size=28672
+wheel_b.upload.maximum_data_size=2560
+wheel_b.upload.speed=57600
+wheel_b.upload.disable_flushing=true
+wheel_b.upload.use_1200bps_touch=true
+wheel_b.upload.wait_for_upload_port=true
+wheel_b.build.mcu=atmega32u4
+wheel_b.build.f_cpu=16000000L
+wheel_b.build.vid=0x2341
+wheel_b.build.pid=0x9A02
+wheel_b.build.usb_product="Wheel Encoders B"
+wheel_b.build.usb_manufacturer="DIY"
+wheel_b.build.board=AVR_MICRO
+wheel_b.build.core=arduino:arduino
+wheel_b.build.variant=arduino:micro
+wheel_b.build.extra_flags={build.usb_flags}
+
+wheel_c.name=Wheel Micro C
+wheel_c.vid.0=0x2341
+wheel_c.pid.0=0x9A03
+wheel_c.upload.tool=arduino:avrdude
+wheel_c.upload.protocol=avr109
+wheel_c.upload.maximum_size=28672
+wheel_c.upload.maximum_data_size=2560
+wheel_c.upload.speed=57600
+wheel_c.upload.disable_flushing=true
+wheel_c.upload.use_1200bps_touch=true
+wheel_c.upload.wait_for_upload_port=true
+wheel_c.build.mcu=atmega32u4
+wheel_c.build.f_cpu=16000000L
+wheel_c.build.vid=0x2341
+wheel_c.build.pid=0x9A03
+wheel_c.build.usb_product="Wheel Matrix C"
+wheel_c.build.usb_manufacturer="DIY"
+wheel_c.build.board=AVR_MICRO
+wheel_c.build.core=arduino:arduino
+wheel_c.build.variant=arduino:micro
+wheel_c.build.extra_flags={build.usb_flags}

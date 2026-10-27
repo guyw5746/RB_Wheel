@@ -1,0 +1,436 @@
+{
+  "CarChoices": [
+    {
+      "CarId": "Red Bull Racing ‘26",
+      "CarModel": "Red Bull Racing ‘26",
+      "GameCode": "F12025",
+      "IsSet": true
+    }
+  ],
+  "UseStrictJSIsolation": true,
+  "EmbeddedJavascript": null,
+  "GlobalBrightness": 15.019999999999868,
+  "GlobalBrightnessPreset": {
+    "CurrentMode": 0,
+    "Brightness": 15.019999999999868,
+    "BrightnessSettings": {}
+  },
+  "LedContainers": [
+    {
+      "LedContainers": [
+        {
+          "LedContainers": [
+            {
+              "IdleColor": "Transparent",
+              "IdleBlinkingColor": "Transparent",
+              "EnableIdleBlinking": false,
+              "LedCount": 1,
+              "Color": "Yellow",
+              "BlinkingColor": "Transparent",
+              "BlinkEnabled": false,
+              "DualBlinkTimingEnabled": true,
+              "OffDelay": 1000,
+              "OnDelay": 500,
+              "StartPosition": 3,
+              "ContainerType": "Flags.YellowFlag",
+              "Description": "Generates a static color when the Yellow flag is ON"
+            },
+            {
+              "IdleColor": "Transparent",
+              "IdleBlinkingColor": "Transparent",
+              "EnableIdleBlinking": false,
+              "LedCount": 1,
+              "Color": "Yellow",
+              "BlinkingColor": "Transparent",
+              "BlinkEnabled": false,
+              "DualBlinkTimingEnabled": true,
+              "OffDelay": 1000,
+              "OnDelay": 500,
+              "StartPosition": 19,
+              "ContainerType": "Flags.YellowFlag",
+              "Description": "Generates a static color when the Yellow flag is ON"
+            },
+            {
+              "IdleColor": "Transparent",
+              "IdleBlinkingColor": "Transparent",
+              "EnableIdleBlinking": false,
+              "LedCount": 3,
+              "Color": "Red",
+              "BlinkingColor": "Transparent",
+              "BlinkEnabled": true,
+              "DualBlinkTimingEnabled": true,
+              "OffDelay": 500,
+              "OnDelay": 500,
+              "ContainerType": "Flags.GreenFlag"
+            },
+            {
+              "IdleColor": "Transparent",
+              "IdleBlinkingColor": "Transparent",
+              "EnableIdleBlinking": false,
+              "LedCount": 3,
+              "Color": "Red",
+              "BlinkingColor": "Transparent",
+              "BlinkEnabled": true,
+              "DualBlinkTimingEnabled": true,
+              "OffDelay": 500,
+              "OnDelay": 500,
+              "StartPosition": 19,
+              "ContainerType": "Flags.GreenFlag"
+            },
+            {
+              "IdleColor": "Transparent",
+              "IdleBlinkingColor": "Transparent",
+              "EnableIdleBlinking": false,
+              "LedCount": 1,
+              "Color": "Blue",
+              "BlinkingColor": "Transparent",
+              "BlinkEnabled": true,
+              "DualBlinkTimingEnabled": true,
+              "OffDelay": 500,
+              "OnDelay": 500,
+              "StartPosition": 2,
+              "ContainerType": "Flags.BlueFlag"
+            },
+            {
+              "IdleColor": "Transparent",
+              "IdleBlinkingColor": "Transparent",
+              "EnableIdleBlinking": false,
+              "LedCount": 1,
+              "Color": "Blue",
+              "BlinkingColor": "Transparent",
+              "BlinkEnabled": true,
+              "DualBlinkTimingEnabled": true,
+              "OffDelay": 500,
+              "OnDelay": 500,
+              "StartPosition": 20,
+              "ContainerType": "Flags.BlueFlag"
+            }
+          ],
+          "ContainerType": "Base.Group",
+          "Description": "Flags"
+        },
+        {
+          "LedContainers": [
+            {
+              "LedCount": 3,
+              "Color1Alternate": "Black",
+              "Color2Alternate": "White",
+              "Color1SingleColor": "Black",
+              "Color2SingleColor": "White",
+              "AlternateDelay": 500,
+              "AlternateEnabled": true,
+              "BlinkColor1Delay": 500,
+              "LimiterBehavior": 0,
+              "Alternate2BlanckBackground": true,
+              "ContainerType": "Status.SpeedLimiterAnimation",
+              "Description": "Speed limited animation L"
+            },
+            {
+              "LedCount": 3,
+              "Color1Alternate": "AliceBlue",
+              "Color2Alternate": "Black",
+              "Color1SingleColor": "AliceBlue",
+              "Color2SingleColor": "Black",
+              "AlternateDelay": 500,
+              "AlternateEnabled": true,
+              "BlinkColor1Delay": 500,
+              "LimiterBehavior": 0,
+              "Alternate2BlanckBackground": true,
+              "StartPosition": 19,
+              "ContainerType": "Status.SpeedLimiterAnimation",
+              "Description": "Speed limited animation R"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if([CarSettings_CurrentDisplayedRPMPercent]>=91or[CarSettings_RPMRedLineReached]=1,true,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 5,
+                  "Color": "Green",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": true,
+                  "BlinkDelay": 50,
+                  "ContainerType": "StaticColor"
+                },
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 5,
+                  "Color": "Blue",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": true,
+                  "BlinkDelay": 50,
+                  "StartPosition": 6,
+                  "ContainerType": "StaticColor",
+                  "Description": "Generates a static light effect copy"
+                }
+              ],
+              "StartPosition": 9,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "Shiftlight Redline reached"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if ([CarSettings_RPMRedLineReached]=0,[CarSettings_RPMShiftLight1]>=0.6,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 5,
+                  "Color": "Green",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": false,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 9,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "Shiftlight group 1"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if ([CarSettings_RPMRedLineReached]=0,[CarSettings_CurrentDisplayedRPMPercent]>=87,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 5,
+                  "Color": "Blue",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": false,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 14,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "Shiftlight group 2"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if([DataCorePlugin.GameRawData.PlayerCarTelemetry2Data.m_overtakeActive]!=1,[GameRawData.PlayerCarStatusData.m_ersDeployMode]=1,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 1,
+                  "Color": "Yellow",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": false,
+                  "BlinkDelay": 200,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 5,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "ERS Medium"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if([DataCorePlugin.GameRawData.PlayerCarTelemetry2Data.m_overtakeActive]=1,[GameRawData.PlayerCarStatusData.m_ersDeployMode]=1,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 1,
+                  "Color": "MediumVioletRed",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": false,
+                  "BlinkDelay": 200,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 5,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "OT ERS Medium"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if([DataCorePlugin.GameRawData.PlayerCarTelemetry2Data.m_overtakeActive]!=1,[GameRawData.PlayerCarStatusData.m_ersDeployMode]=2,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 1,
+                  "Color": "Cyan",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": false,
+                  "BlinkDelay": 200,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 5,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "ERS Hotlap"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if([DataCorePlugin.GameRawData.PlayerCarTelemetry2Data.m_overtakeActive]=1,[GameRawData.PlayerCarStatusData.m_ersDeployMode]=2,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 1,
+                  "Color": "Cyan",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": false,
+                  "BlinkDelay": 200,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 5,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "OT ERS Hotlap"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if([DataCorePlugin.GameRawData.PlayerCarTelemetry2Data.m_overtakeActive]!=1,[GameRawData.PlayerCarStatusData.m_ersDeployMode]=3,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 1,
+                  "Color": "Yellow",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": true,
+                  "BlinkDelay": 200,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 5,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "ERS Boost"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if([DataCorePlugin.GameRawData.PlayerCarTelemetry2Data.m_overtakeActive]=1,[GameRawData.PlayerCarStatusData.m_ersDeployMode]=3,false)"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 1,
+                  "Color": "MediumVioletRed",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": true,
+                  "BlinkDelay": 200,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 5,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "OT ERS Boost"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "[GameRawData.PlayerCarTelemetry2Data.m_activeAeroMode]=1 || [DRSAvailable] = 1"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 1,
+                  "Color": "Red",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": false,
+                  "BlinkDelay": 200,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 4,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "SM activated"
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "[GameRawData.PlayerCarTelemetry2Data.m_activeAeroAvailable]=1 || [DRSEnabled] = 1"
+              },
+              "LedContainers": [
+                {
+                  "IdleBlinkingColor": "Transparent",
+                  "EnableIdleBlinking": false,
+                  "LedCount": 1,
+                  "Color": "AliceBlue",
+                  "BlinkingColor": "Transparent",
+                  "BlinkEnabled": false,
+                  "BlinkDelay": 200,
+                  "ContainerType": "StaticColor"
+                }
+              ],
+              "StartPosition": 4,
+              "ContainerType": "Groups.CustomConditionalGroup",
+              "Description": "SM Enabled"
+            }
+          ],
+          "ContainerType": "Base.Group",
+          "Description": "Speedmeter"
+        }
+      ],
+      "ContainerType": "Groups.GameRunningGroup"
+    }
+  ],
+  "TestLedsGameData": {
+    "CarModel": null,
+    "CarId": null,
+    "CarChoice": {
+      "CarId": null,
+      "CarModel": null,
+      "GameCode": null,
+      "IsSet": false
+    },
+    "GearEx": 5,
+    "FuelMax": 100.0,
+    "RPMSMax": 10000.0,
+    "TurboMax": 3.5,
+    "TurnIndicatorLeftEnabled": false,
+    "TurnIndicatorRightEnabled": false,
+    "SessionBestDeltaEx": 0.0,
+    "AllTimeBestDeltaEx": 0.0,
+    "DRSEnabled": false,
+    "DRSAvailable": false,
+    "MaxRpm": 10000.0,
+    "GameRunning": true,
+    "Brake": 2.5510204081632648,
+    "GameName": "F12025",
+    "Fuel": 0.0,
+    "RPMPercent": 78.65306122448979,
+    "RPMRedlineReached": false,
+    "SpeedKmh": 0.0,
+    "SpeedMph": 0.0,
+    "Turbo": 0.0,
+    "TurboPercent": 0.0,
+    "Gear": "5",
+    "IsInPitLane": false,
+    "PitLimiterOn": false,
+    "AbsEnabled": false,
+    "AbsActive": false,
+    "TCEnabled": false,
+    "TCActive": false,
+    "LowFuelAlert": false,
+    "SpotterCarLeft": false,
+    "SpotterCarRight": false,
+    "BlackFlag": false,
+    "YellowFlag": false,
+    "WhiteFlag": false,
+    "BlueFlag": false,
+    "GreenFlag": false,
+    "CarStartedTime": "2025-09-12T14:11:02.5315185+09:00",
+    "SessionBestDelta": 0.0,
+    "AllTimeBestDelta": 0.0
+  },
+  "UseProfileBrightness": true,
+  "LastLoaded": "2022-10-29T13:08:20.0926736+09:00",
+  "Name": "Codemasters F1 25 (2026 Season pack) - RB22",
+  "ProfileId": "346a5f18-d644-45e4-ae23-dc705ab3b8ff",
+  "GameCode": "F12025",
+  "CarChoice": null
+}
